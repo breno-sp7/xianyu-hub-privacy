@@ -1,77 +1,83 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Xianyu Hub</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.7;
-            color:#333;
-        }
-        h1,h2{
-            color:#222;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade - Xianyu Hub</title>
+<style>
+body{
+font-family: Arial, sans-serif;
+max-width: 900px;
+margin: 40px auto;
+padding: 20px;
+line-height: 1.7;
+color:#333;
+}
+h1,h2{
+color:#222;
+}
+</style>
 </head>
 <body>
 
 <h1>Política de Privacidade - Xianyu Hub</h1>
-
-<p><strong>Última atualização:</strong> 31 de julho de 2026</p>
+<p><strong>Última atualização:</strong> 15 de setembro de 2026</p>
 
 <p>A extensão <strong>Xianyu Hub</strong> foi desenvolvida com o compromisso de proteger a privacidade de seus usuários. Esta política explica como a extensão utiliza informações durante seu funcionamento.</p>
 
 <h2>Coleta de Dados</h2>
-
 <p>A Xianyu Hub <strong>não coleta, armazena, vende ou compartilha dados pessoais dos usuários</strong>.</p>
-
 <p>A extensão não coleta informações como:</p>
-
 <ul>
 <li>Nome</li>
 <li>E-mail</li>
 <li>Senha</li>
-<li>Histórico de navegação</li>
-<li>Pesquisas realizadas</li>
 <li>Endereço IP</li>
 <li>Cookies</li>
 <li>Dados financeiros</li>
 <li>Informações de identificação pessoal</li>
+<li>Histórico de navegação do navegador (a extensão não utiliza e não solicita a permissão "history" do Chrome)</li>
 </ul>
 
 <h2>Pesquisas no Xianyu</h2>
+<p>Todas as pesquisas realizadas no site Xianyu/Goofish acontecem localmente entre o navegador do usuário e o próprio site. A extensão não possui acesso às pesquisas realizadas, aos produtos pesquisados ou ao histórico de navegação do usuário.</p>
 
-<p>Todas as pesquisas realizadas no site Xianyu acontecem localmente entre o navegador do usuário e o próprio Xianyu. A extensão não possui acesso às pesquisas realizadas, aos produtos pesquisados ou ao histórico do usuário.</p>
-
-<h2>Uso de APIs</h2>
-
-<p>A extensão utiliza serviços externos apenas para fornecer funcionalidades como:</p>
-
+<h2>Histórico de Anúncios e Vendedores (recurso interno, opcional)</h2>
+<p>A extensão possui um recurso opcional, <strong>desativado por padrão</strong>, que permite ao usuário registrar localmente os anúncios e vendedores do Xianyu/Goofish que ele mesmo clicou dentro da extensão. Esse recurso:</p>
 <ul>
-<li>Tradução automática de anúncios.</li>
-<li>Conversão automática de preços utilizando a cotação atual.</li>
+<li>Só é ativado manualmente pelo usuário, através de um botão na própria extensão;</li>
+<li>Armazena apenas título, imagem, preço e link do anúncio/vendedor visitado, junto com a data/hora do clique;</li>
+<li>É limitado a, no máximo, 200 registros;</li>
+<li>Fica salvo exclusivamente no armazenamento local do navegador (<code>chrome.storage.local</code>), no próprio dispositivo do usuário;</li>
+<li><strong>Nunca é enviado para nenhum servidor</strong>, nem da extensão, nem de terceiros;</li>
+<li>Pode ser apagado completamente pelo usuário a qualquer momento, através do botão "Limpar histórico".</li>
 </ul>
+<p>Este recurso não utiliza e não tem relação com o histórico de navegação do Google Chrome ou de qualquer outro navegador.</p>
 
-<p>Esses serviços recebem apenas as informações estritamente necessárias para executar essas funcionalidades.</p>
+<h2>Uso de APIs Externas</h2>
+<p>A extensão se conecta a serviços externos apenas para consultar a cotação atual de moedas (Yuan/CNY para BRL, USD, EUR e GBP), com o objetivo de converter automaticamente os preços exibidos nos anúncios. Os serviços consultados são:</p>
+<ul>
+<li>bytemax.exchange</li>
+<li>api.newrecargas.com</li>
+<li>noob.exchange</li>
+<li>economia.awesomeapi.com.br</li>
+</ul>
+<p>Essas consultas são requisições simples de cotação pública de moeda. <strong>Nenhum dado pessoal ou identificável do usuário é enviado</strong> nessas requisições — apenas a solicitação da taxa de câmbio atual.</p>
 
 <h2>Armazenamento de Dados</h2>
-
-<p>A Xianyu Hub não mantém banco de dados com informações dos usuários e não realiza qualquer tipo de rastreamento.</p>
+<p>A Xianyu Hub não mantém banco de dados externo com informações dos usuários e não realiza qualquer tipo de rastreamento ou telemetria. Os dados abaixo ficam salvos apenas localmente, no armazenamento do próprio navegador do usuário (<code>chrome.storage.local</code> e <code>localStorage</code>), podendo ser apagados pelo usuário a qualquer momento:</p>
+<ul>
+<li>Favoritos salvos pelo usuário;</li>
+<li>Vendedores salvos pelo usuário;</li>
+<li>Histórico opcional de anúncios/vendedores (ver seção acima);</li>
+<li>Preferências de tema (claro/escuro), idioma e moeda selecionada.</li>
+</ul>
 
 <h2>Alterações nesta Política</h2>
-
 <p>Esta Política de Privacidade poderá ser atualizada sempre que necessário. A versão mais recente estará sempre disponível nesta página.</p>
 
 <h2>Contato</h2>
-
 <p>Caso tenha dúvidas sobre esta Política de Privacidade, entre em contato através do GitHub do projeto ou pelo canal oficial de suporte da extensão.</p>
 
 </body>
 </html>
-```
