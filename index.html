@@ -16,31 +16,94 @@ color:#333;
 h1,h2{
 color:#222;
 }
+h2{
+margin-top: 2em;
+}
+code{
+background:#f2f2f4;
+padding:1px 5px;
+border-radius:4px;
+font-size:.92em;
+}
+table{
+border-collapse: collapse;
+width: 100%;
+margin: 1em 0;
+font-size: .95em;
+}
+th,td{
+border:1px solid #ddd;
+padding:8px 10px;
+text-align:left;
+vertical-align:top;
+}
+th{
+background:#f7f7f8;
+}
+a{
+color:#9a7400;
+}
+.resumo{
+background:#fdf8e6;
+border:1px solid #f1d98a;
+border-radius:8px;
+padding:12px 16px;
+}
+@media (prefers-color-scheme: dark){
+body{background:#111114;color:#d4d4d8;}
+h1,h2{color:#fff;}
+code{background:#26262b;}
+th{background:#1c1c20;}
+th,td{border-color:#333;}
+a{color:#f1c40f;}
+.resumo{background:#1f1b0c;border-color:#5c4b12;}
+}
 </style>
 </head>
 <body>
 
 <h1>Política de Privacidade - Xianyu Hub</h1>
-<p><strong>Última atualização:</strong> 15 de setembro de 2026</p>
+<p><strong>Última atualização:</strong> 15 de outubro de 2026 (versão 1.3.0 da extensão)</p>
 
-<p>A extensão <strong>Xianyu Hub</strong> foi desenvolvida com o compromisso de proteger a privacidade de seus usuários. Esta política explica como a extensão utiliza informações durante seu funcionamento.</p>
+<p>A extensão <strong>Xianyu Hub</strong> foi desenvolvida com o compromisso de proteger a privacidade de seus usuários. Esta política explica quais informações a extensão usa, para que, para onde elas vão e como você pode apagá-las.</p>
 
-<h2>Coleta de Dados</h2>
-<p>A Xianyu Hub <strong>não coleta, armazena, vende ou compartilha dados pessoais dos usuários</strong>.</p>
-<p>A extensão não coleta informações como:</p>
+<p class="resumo"><strong>Em resumo:</strong> a Xianyu Hub não tem servidor próprio, não cria contas, não faz rastreamento nem telemetria e não vende dados. Tudo o que ela guarda fica no seu próprio navegador. Algumas funções enviam textos ou imagens a serviços externos (tradução, cotação e busca por foto) apenas para funcionar, como explicado abaixo.</p>
+
+<h2>Dados que a extensão não coleta</h2>
+<p>A Xianyu Hub <strong>não coleta, não vende e não compartilha dados pessoais dos usuários</strong> com o desenvolvedor ou com terceiros para fins de publicidade, perfil ou revenda. A extensão não coleta informações como:</p>
 <ul>
 <li>Nome</li>
 <li>E-mail</li>
 <li>Senha</li>
-<li>Endereço IP</li>
-<li>Cookies</li>
-<li>Dados financeiros</li>
-<li>Informações de identificação pessoal</li>
+<li>Endereço, telefone ou documentos</li>
+<li>Dados financeiros ou de pagamento</li>
+<li>Cookies de login</li>
 <li>Histórico de navegação do navegador (a extensão não utiliza e não solicita a permissão "history" do Chrome)</li>
 </ul>
 
-<h2>Pesquisas no Xianyu</h2>
-<p>Todas as pesquisas realizadas no site Xianyu/Goofish acontecem localmente entre o navegador do usuário e o próprio site. A extensão não possui acesso às pesquisas realizadas, aos produtos pesquisados ou ao histórico de navegação do usuário.</p>
+<h2>Busca e tradução</h2>
+<p>A extensão oferece uma barra de busca que transforma o que você escreve (em português, inglês ou espanhol) em uma busca em chinês no Xianyu/Goofish. Ela também pode traduzir a descrição dos anúncios (recurso "Leitura do anúncio") e, se você ativar, o texto da página inteira.</p>
+<p>Para isso, <strong>o texto digitado na busca e os textos dos anúncios/páginas que serão traduzidos são enviados ao serviço de tradução do Google</strong> (<code>translate.googleapis.com</code>). São enviados apenas esses textos, sem nome, conta ou qualquer identificação sua por parte da extensão. O tratamento desses dados pelo Google segue a política de privacidade do Google.</p>
+<p>As buscas recentes ficam salvas apenas no seu navegador, para você reutilizá-las, e podem ser apagadas a qualquer momento.</p>
+
+<h2>Busca por foto (opcional)</h2>
+<p>A busca por foto só funciona se você mesmo cadastrar a sua chave da API do Claude (Anthropic) em <em>popup → Ferramentas</em>. Quando você envia uma foto:</p>
+<ul>
+<li>A <strong>imagem escolhida por você é enviada à API da Anthropic</strong> (<code>api.anthropic.com</code>), usando a sua própria chave, apenas para identificar o produto e gerar o termo de busca;</li>
+<li>A chave fica salva somente no seu navegador (<code>chrome.storage.local</code>), nunca é enviada ao desenvolvedor da extensão e pode ser apagada a qualquer momento no mesmo campo;</li>
+<li>O tratamento da imagem pela Anthropic segue a política de privacidade da Anthropic.</li>
+</ul>
+<p>Se você não cadastrar uma chave, nenhuma imagem é enviada a lugar nenhum.</p>
+
+<h2>Monitor de favoritos e notificações</h2>
+<p>Se o Monitor estiver ligado, a extensão consulta periodicamente o próprio Xianyu/Goofish, a partir do seu navegador, para verificar se os anúncios salvos nos seus favoritos baixaram ou subiram de preço, foram vendidos ou retirados. Quando isso acontece, ela mostra uma notificação do navegador. Essas consultas vão apenas ao Xianyu/Goofish e os resultados ficam no seu navegador. O Monitor pode ser desligado em <em>popup → Ferramentas</em>.</p>
+
+<h2>Cotação de moedas</h2>
+<p>Para converter os preços em yuan (CNY) para BRL, USD, EUR e GBP, a extensão consulta cotações públicas nos serviços abaixo. Essas consultas pedem apenas a taxa de câmbio atual; <strong>nenhum dado pessoal ou identificável é enviado</strong>.</p>
+<ul>
+<li><code>bytemax.exchange</code> (cotação BRL)</li>
+<li><code>economia.awesomeapi.com.br</code> (cotações USD, EUR e GBP)</li>
+</ul>
 
 <h2>Histórico de Anúncios e Vendedores (recurso interno, opcional)</h2>
 <p>A extensão possui um recurso opcional, <strong>desativado por padrão</strong>, que permite ao usuário registrar localmente os anúncios e vendedores do Xianyu/Goofish que ele mesmo clicou dentro da extensão. Esse recurso:</p>
@@ -54,30 +117,51 @@ color:#222;
 </ul>
 <p>Este recurso não utiliza e não tem relação com o histórico de navegação do Google Chrome ou de qualquer outro navegador.</p>
 
-<h2>Uso de APIs Externas</h2>
-<p>A extensão se conecta a serviços externos apenas para consultar a cotação atual de moedas (Yuan/CNY para BRL, USD, EUR e GBP), com o objetivo de converter automaticamente os preços exibidos nos anúncios. Os serviços consultados são:</p>
+<h2>Armazenamento local</h2>
+<p>A Xianyu Hub não mantém banco de dados externo com informações dos usuários e não realiza qualquer tipo de rastreamento, análise de uso ou telemetria. Os dados abaixo ficam salvos apenas no armazenamento do próprio navegador (<code>chrome.storage.local</code> e <code>localStorage</code>) e são apagados ao remover a extensão ou pelos controles da própria extensão:</p>
 <ul>
-<li>bytemax.exchange</li>
-<li>api.newrecargas.com</li>
-<li>noob.exchange</li>
-<li>economia.awesomeapi.com.br</li>
-</ul>
-<p>Essas consultas são requisições simples de cotação pública de moeda. <strong>Nenhum dado pessoal ou identificável do usuário é enviado</strong> nessas requisições — apenas a solicitação da taxa de câmbio atual.</p>
-
-<h2>Armazenamento de Dados</h2>
-<p>A Xianyu Hub não mantém banco de dados externo com informações dos usuários e não realiza qualquer tipo de rastreamento ou telemetria. Os dados abaixo ficam salvos apenas localmente, no armazenamento do próprio navegador do usuário (<code>chrome.storage.local</code> e <code>localStorage</code>), podendo ser apagados pelo usuário a qualquer momento:</p>
-<ul>
-<li>Favoritos salvos pelo usuário;</li>
-<li>Vendedores salvos pelo usuário;</li>
+<li>Favoritos e vendedores salvos pelo usuário;</li>
 <li>Histórico opcional de anúncios/vendedores (ver seção acima);</li>
-<li>Preferências de tema (claro/escuro), idioma e moeda selecionada.</li>
+<li>Buscas recentes da barra de busca;</li>
+<li>Chave da API do Claude, se cadastrada (ver "Busca por foto");</li>
+<li>Preferências: tema (claro/escuro), idioma, moeda, Modo leve e ferramentas ligadas/desligadas;</li>
+<li>Última cotação consultada e marcadores internos (por exemplo, se o tour de boas-vindas já foi visto).</li>
 </ul>
+
+<h2>Links de indicação (afiliados)</h2>
+<p>Alguns botões da extensão abrem sites parceiros com um <strong>código de indicação</strong>:</p>
+<ul>
+<li>Botões que abrem um anúncio na <strong>CSSBuy</strong> ou na <strong>FansBuy</strong> (parâmetro <code>promotionCode</code> no link);</li>
+<li>Botão "Recarregar na Bytemax" (parâmetro <code>ref</code> no link).</li>
+</ul>
+<p>Esses links são abertos <strong>somente quando você clica no botão</strong>. Se você fizer uma compra ou recarga por eles, o desenvolvedor da extensão pode receber uma comissão do parceiro. <strong>Isso não altera o preço que você paga.</strong> Nenhum dado seu é enviado ao parceiro pela extensão além do próprio link aberto.</p>
+
+<h2>Permissões solicitadas</h2>
+<table>
+<tr><th>Permissão</th><th>Para que é usada</th></tr>
+<tr><td><code>storage</code></td><td>Guardar favoritos, preferências e os demais dados locais listados acima.</td></tr>
+<tr><td><code>alarms</code></td><td>Atualizar a cotação de tempos em tempos.</td></tr>
+<tr><td><code>notifications</code></td><td>Avisar quando um favorito muda de preço, é vendido ou retirado (Monitor).</td></tr>
+<tr><td>Acesso a <code>goofish.com</code> e <code>xianyu.com</code></td><td>Mostrar preços convertidos, a barra de busca, o índice do vendedor, a leitura do anúncio e o Monitor nas páginas do Xianyu.</td></tr>
+<tr><td>Acesso a <code>cssbuy.com</code> e <code>fansbuy.com</code></td><td>Mostrar os botões de voltar ao anúncio original, abrir na Doppel e recarregar na Bytemax, e abrir um anúncio ao colar um link do Xianyu na busca.</td></tr>
+<tr><td>Acesso a <code>translate.googleapis.com</code>, <code>bytemax.exchange</code> e <code>api.anthropic.com</code></td><td>Tradução, cotação e busca por foto, como descrito nesta política.</td></tr>
+</table>
+
+<h2>Uso Limitado</h2>
+<p>O uso das informações recebidas pela extensão segue a <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq" target="_blank" rel="noopener">Política de Dados do Usuário da Chrome Web Store</a>, incluindo os requisitos de <strong>Uso Limitado</strong>: os dados são usados apenas para fornecer as funções descritas acima, não são vendidos, não são usados para publicidade e não são usados para avaliar crédito ou para fins de empréstimo.</p>
+
+<h2>Crianças</h2>
+<p>A Xianyu Hub não é direcionada a menores de 13 anos e não coleta intencionalmente informações de crianças.</p>
+
+<h2>Seus direitos</h2>
+<p>Como a extensão não envia seus dados ao desenvolvedor, você mantém o controle total sobre eles: pode consultá-los e apagá-los pelos controles da própria extensão ou removendo a extensão do navegador. Em caso de dúvidas sobre seus direitos (inclusive os previstos na LGPD), use o contato abaixo.</p>
 
 <h2>Alterações nesta Política</h2>
-<p>Esta Política de Privacidade poderá ser atualizada sempre que necessário. A versão mais recente estará sempre disponível nesta página.</p>
+<p>Esta Política de Privacidade poderá ser atualizada sempre que a extensão ganhar ou mudar funções. A versão mais recente estará sempre disponível nesta página, com a data da última atualização no topo.</p>
 
 <h2>Contato</h2>
-<p>Caso tenha dúvidas sobre esta Política de Privacidade, entre em contato através do GitHub do projeto ou pelo canal oficial de suporte da extensão.</p>
+<p>Caso tenha dúvidas sobre esta Política de Privacidade, entre em contato pelo canal oficial de suporte da extensão no Discord: <a href="https://discord.gg/xc2X2qTnVY" target="_blank" rel="noopener">discord.gg/xc2X2qTnVY</a>.</p>
 
 </body>
 </html>
+
